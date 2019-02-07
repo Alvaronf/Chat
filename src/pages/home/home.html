@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Chat
+      <ion-input placeholder="Usuario" [(ngModel)]="usuario"></ion-input>
+   </ion-title>
+   
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card *ngFor="let mensaje of mensajesr">
+        <ion-card-header>
+          {{mensaje.nombre}}
+        </ion-card-header>
+        <ion-card-content>
+          {{mensaje.mensaje}}
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-input placeholder="Sitio para escribir" [(ngModel)]="mensaje"></ion-input>
+        <button (click)="enviarmensaje()" placeholder="">
+          Enviar
+        </button>
+    </ion-toolbar>
+</ion-footer>
+          
+  
+
+
+
+<ion-title>
+       
+  </ion-title>
